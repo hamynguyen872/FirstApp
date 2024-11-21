@@ -1,4 +1,5 @@
 import { View, Text, Pressable, StyleSheet } from "react-native";
+import { GlobalStyles } from "../constants/styles";
 
 function SummaryBar({ selectedView, onToggleView }) {
     return (
@@ -41,7 +42,8 @@ const styles = StyleSheet.create({
         flex: 1,
         width: '100%',
         padding: 20,
-        backgroundColor: '#D97DB9',
+        backgroundColor: GlobalStyles.colors.primary500,
+
 
     },
     headerRow: {
@@ -56,24 +58,25 @@ const styles = StyleSheet.create({
         overflow: 'hidden',
     },
     button: {
-        paddingVertical: 3,
+        paddingVertical: 5,
         paddingHorizontal: 8,
-        backgroundColor: '#D97DB9'
+        backgroundColor: GlobalStyles.colors.primary400
     },
     activeButton: {
-        backgroundColor: "#FFE2F5",
+        backgroundColor: GlobalStyles.colors.primary300,
     },
     buttonText: {
         fontSize: 12,
         color: 'white',
     },
     activeText: {
-        color: '#E21277'
+        color: 'white'
     },
     summary: {
         flexDirection: 'row',
         justifyContent: 'space-around',
-        marginTop: 10
+        marginTop: 8,
+        marginBottom: 10
     },
     summaryItem: {
         alignItems: 'center',
@@ -81,10 +84,10 @@ const styles = StyleSheet.create({
     summaryValue: {
         fontSize: 23,
         fontWeight: 'bold',
-        color: 'white'
+        color: GlobalStyles.colors.primaryText
     },
     summaryLabel: {
-        fontSize: 12,
+        fontSize: 15,
         color: 'white',
     },
 });

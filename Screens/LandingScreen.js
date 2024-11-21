@@ -1,5 +1,6 @@
 import { View, Text, StyleSheet } from "react-native";
 import MainButtons from "../components/MainButtons"
+import { GlobalStyles } from "../constants/styles";
 
 function LandingScreens({ navigation }) {
     return (
@@ -34,7 +35,8 @@ export default LandingScreens;
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        justifyContent: 'flex-start'
+        justifyContent: 'flex-start',
+        backgroundColor: GlobalStyles.colors.primary500
     },
     buttonsContainer: {
         flex: 3,

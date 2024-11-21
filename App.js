@@ -11,14 +11,15 @@ import TimeTrack from './Screens/TimeTrackScreen';
 import AddTime from './Screens/AddTimeScreen';
 import RecordTime from './Screens/RecordTimeScreen';
 import BackNavigation from './components/backNavigation';
+import { GlobalStyles } from './constants/styles';
 
 const Stack = createNativeStackNavigator();
 const BottomTabs = createBottomTabNavigator();
 
 function TimeOverview() {
   return <BottomTabs.Navigator screenOptions={({ navigation }) => ({
-    headerStyle: { backgroundColor: 'pink' },
-    headerTintColor: 'black',
+    headerStyle: { backgroundColor: GlobalStyles.colors.primary400 },
+    headerTintColor: 'white',
     headerLeft: ({ tintColor }) => (
       <BackNavigation
         onPress={() => {
@@ -45,16 +46,32 @@ export default function App() {
   return (
     <>
       <StatusBar style="light" />
-      <NavigationContainer>
-        <Stack.Navigator>
+      <NavigationContainer
+      >
+        <Stack.Navigator screenOptions={{
+          headerStyle: { backgroundColor: GlobalStyles.colors.primary400 }
+        }} >
           <Stack.Screen
             name="Main"
             component={LandingScreens}
+            options={{
+              headerTitleStyle: {
+                fontSize: 18,
+                fontWeight: '500',
+                color: 'white',
+              }
+            }}
           />
           <Stack.Screen
             name="UserProfile"
             component={UserProfile}
-          // options={{ headerShown: false }}
+            options={{
+              headerTitleStyle: {
+                fontSize: 16,
+                fontWeight: '600',
+                color: 'white',
+              }
+            }}
           />
           <Stack.Screen
             name="TimeTrack"
@@ -65,6 +82,13 @@ export default function App() {
           <Stack.Screen
             name="PomodoroChallenge"
             component={PomodoroChallenge}
+            options={{
+              headerTitleStyle: {
+                fontSize: 16,
+                fontWeight: '600',
+                color: 'white',
+              }
+            }}
           />
         </Stack.Navigator>
       </NavigationContainer>

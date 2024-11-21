@@ -1,4 +1,5 @@
 import { View, Text, StyleSheet } from "react-native";
+import { GlobalStyles } from "../constants/styles";
 
 function IntroBar() {
     return <View style={styles.container}>
@@ -15,12 +16,13 @@ export default IntroBar;
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#D97DB9'
+        backgroundColor: GlobalStyles.colors.primary500
     },
     description: {
         fontSize: 14,
-        color: 'white',
+        color: GlobalStyles.colors.primaryText,
         margin: 10,
+        fontWeight: '700'
         // textAlign: 'justif'
     }
 })

@@ -32,11 +32,11 @@ const styles = StyleSheet.create({
         flex: 1,
     },
     summaryContainer: {
-        flex: 0.15,
+        flex: 0.18,
         alignItems: 'center'
     },
     analysis: {
-        flex: 0.85,
+        flex: 0.82,
 
     }
 })

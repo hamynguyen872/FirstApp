@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import { GlobalStyles } from '../constants/styles';
 
 const Timer = () => {
     const initialTime = 25 * 60; // 25 minutes in seconds
@@ -53,7 +54,7 @@ const Timer = () => {
 };
 
 export default Timer;
-
+// '#D97DB9'
 const styles = StyleSheet.create({
     container: {
         flex: 1,
@@ -63,6 +64,8 @@ const styles = StyleSheet.create({
     },
     timerText: {
         fontSize: 48,
+        color: GlobalStyles.colors.accent600,
+        fontWeight: 'bold'
     },
     buttonsContainer: {
         flexDirection: 'row',
@@ -73,14 +76,14 @@ const styles = StyleSheet.create({
     button: {
         flex: 1,
         marginHorizontal: 25,
-        paddingVertical: 10,
+        paddingVertical: 16,
         backgroundColor: '#c9d8a6',
         borderRadius: 8,
         alignItems: 'center',
     },
     timeContainer: {
         borderBottomWidth: 2,
-        borderBottomColor: '#D97DB9',
+        borderBottomColor: GlobalStyles.colors.primary300,
         marginBottom: 50,
 
     }

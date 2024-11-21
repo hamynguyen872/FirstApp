@@ -6,7 +6,7 @@ function GraphSection({ selectedView }) {
         <View>
             {selectedView === 'thisWeek' ? (
                 <View>
-                    <Text>THIS WEEK GRAPHS</Text>
+                    <Text>THIS WEEK GRAPHS CHANGE TO FLAT lIST</Text>
                 </View>
             ) : (
                 <View>
