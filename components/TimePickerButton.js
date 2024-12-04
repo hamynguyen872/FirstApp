@@ -1,12 +1,11 @@
 import { View, Pressable, Text, StyleSheet } from "react-native"
 import React from "react";
 import DateTimePicker from "@react-native-community/datetimepicker";
+import { GlobalStyles } from "../constants/styles";
 
-function TimePickerButton({ onPress, title, showPicker, testId, value, onChange, mode }) {
+function TimePickerButton({ onPress, title, showPicker, testId, value, onChange, mode, accentColor }) {
     return (
-        <Pressable
-            onPress={onPress}
-        >
+        <Pressable onPress={onPress}>
             <View style={styles.container}>
                 <View style={styles.textContainer}>
                     <Text style={styles.text}>{title}</Text>
@@ -18,6 +17,8 @@ function TimePickerButton({ onPress, title, showPicker, testId, value, onChange,
                         mode={mode}
                         display="default"
                         onChange={onChange}
+                        accentColor={GlobalStyles.colors.primaryText}
+                        textColor="pink"
 
                     />
                 )}

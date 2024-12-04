@@ -63,6 +63,8 @@ function AddTime() {
                         mode="date"
                         display="default"
                         onChange={onChangeDate}
+                        accentColor='red'
+
                     />
                 </View>
                 <View style={styles.timeContainer}>
@@ -106,6 +108,7 @@ export default AddTime;
 const styles = StyleSheet.create({
     container: {
         flex: 1,
+        marginTop: 20
 
     },
     textContainer: {
