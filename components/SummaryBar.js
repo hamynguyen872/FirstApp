@@ -1,7 +1,9 @@
 import { View, Text, Pressable, StyleSheet } from "react-native";
 import { GlobalStyles } from "../constants/styles";
 
-function SummaryBar({ selectedView, onToggleView }) {
+import React from "react";
+
+function SummaryBar({ selectedView, onToggleView, summaryData }) {
     return (
         <View style={styles.container}>
             <View style={styles.headerRow}>
@@ -23,11 +25,11 @@ function SummaryBar({ selectedView, onToggleView }) {
 
             <View style={styles.summary}>
                 <View style={styles.summaryItem}>
-                    <Text style={styles.summaryValue}>48h</Text>
+                    <Text style={styles.summaryValue}>{summaryData.totalHours || 0}h</Text>
                     <Text style={styles.summaryLabel}>You've spent</Text>
                 </View>
                 <View style={styles.summaryItem}>
-                    <Text style={styles.summaryValue}>95%</Text>
+                    <Text style={styles.summaryValue}>{summaryData.productivity || "N/A"}%</Text>
                     <Text style={styles.summaryLabel}>Productivity Score</Text>
                 </View>
             </View>

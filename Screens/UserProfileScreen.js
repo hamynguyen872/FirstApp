@@ -1,23 +1,11 @@
 import { View, Text, StyleSheet } from "react-native";
-import SummaryBar from "../components/SummaryBar";
-import GraphSection from "../components/GraphSection";
-import { useState } from "react";
+import TimeTrackerChart from "../components/TimeTrackerChart"; // Import the integrated component
 
 function UserProfile() {
-    const [selectedView, setSelectedView] = useState('thisWeek')
-
-    const toggleView = (view) => [
-        setSelectedView(view)
-    ]
-
     return (
         <View style={styles.root}>
-            <View style={styles.summaryContainer}>
-                <SummaryBar selectedView={selectedView} onToggleView={toggleView} />
-            </View>
-            <View style={styles.analysis} >
-                <GraphSection selectedView={selectedView} />
-            </View>
+            <TimeTrackerChart />
+
             <View>
                 <Text>KIKI</Text>
             </View>
@@ -30,13 +18,5 @@ export default UserProfile;
 const styles = StyleSheet.create({
     root: {
         flex: 1,
-    },
-    summaryContainer: {
-        flex: 0.18,
-        alignItems: 'center'
-    },
-    analysis: {
-        flex: 0.82,
-
     }
-})
+});
