@@ -1,5 +1,5 @@
 import { View, Text, StyleSheet } from "react-native";
-import TimeTrackerChart from "../components/TimeTrackerChart"; // Import the integrated component
+import TimeTrackerChart from "../components/TimeTrackerChart/TimeTrackerChart"; // Import the integrated component
 
 function UserProfile() {
     return (
